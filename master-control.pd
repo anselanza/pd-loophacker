@@ -11,7 +11,7 @@
 #X text 2 20 MASTER;
 #X floatatom 89 209 5 0 0 0 - - -;
 #X obj 117 346 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 3334 1;
+-1 -1 5343 1;
 #X obj 98 292 unsig~ 20;
 #X obj 295 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -31,22 +31,22 @@
 1;
 #X text 186 543 % mean-cpu-load;
 #X obj 129 461 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 752 1;
+-1 -1 751 1;
 #X obj 676 36 ctlin 7 1;
 #X floatatom 676 61 5 0 0 0 - - -;
 #X text 675 16 E1;
 #X obj 678 83 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 3800 1;
+-1 -1 2200 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 3041 1;
+-1 -1 4867 1;
 #X text 677 156 E2;
 #X obj 678 176 ctlin 7 2;
 #X obj 678 223 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 1400 1;
+-1 -1 2200 1;
 #X floatatom 506 161 5 0 0 0 - - -;
 #X text 545 162 beats;
 #X obj 426 236 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 5313 1;
+-1 -1 8525 1;
 #X obj 6 -42 loadbang;
 #X msg 122 -33 16;
 #X msg 92 -34 100;
@@ -70,6 +70,7 @@
 #X connect 0 0 51 1;
 #X connect 1 0 50 0;
 #X connect 1 0 51 0;
+#X connect 1 0 12 0;
 #X connect 2 0 51 2;
 #X connect 3 0 11 0;
 #X connect 3 0 16 0;
