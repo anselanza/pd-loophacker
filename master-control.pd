@@ -3,24 +3,24 @@
 #X obj 334 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X floatatom 498 25 5 0 0 0 - - -;
-#X obj 29 252 phasor~;
-#X obj 103 164 expr $f1 / 60 / $f2;
+#X obj -28 152 phasor~;
+#X obj 46 64 expr $f1 / 60 / $f2;
 #X text 52 4 BPM;
 #X floatatom 91 22 5 0 0 0 - - -;
 #X text 92 4 beats;
 #X text 2 20 MASTER;
-#X floatatom 89 209 5 0 0 0 - - -;
-#X obj 117 346 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 5343 1;
-#X obj 98 292 unsig~ 20;
+#X floatatom 32 109 5 0 0 0 - - -;
+#X obj 60 246 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
+-1 -1 2116 1;
+#X obj 41 192 unsig~ 20;
 #X obj 295 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 104 317 5 0 0 0 - - -;
-#X obj 21 443 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 21 384 edge~;
-#X obj 15 299 change~;
-#X obj 21 333 expr~ $v1==1;
+#X floatatom 47 217 5 0 0 0 - - -;
+#X obj -36 343 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -36 284 edge~;
+#X obj -42 199 change~;
+#X obj -36 233 expr~ $v1==1;
 #X text 356 19 load file;
 #X text 537 26 beats;
 #X text 289 184 resync;
@@ -31,40 +31,42 @@
 1;
 #X text 186 543 % mean-cpu-load;
 #X obj 129 461 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 751 1;
+-1 -1 772 1;
 #X obj 676 36 ctlin 7 1;
 #X floatatom 676 61 5 0 0 0 - - -;
 #X text 675 16 E1;
 #X obj 678 83 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 2200 1;
+-1 -1 2469 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 4867 1;
+-1 -1 1950 1;
 #X text 677 156 E2;
 #X obj 678 176 ctlin 7 2;
 #X obj 678 223 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 2200 1;
+-1 -1 2469 1;
 #X floatatom 506 161 5 0 0 0 - - -;
 #X text 545 162 beats;
 #X obj 426 236 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 8525 1;
-#X obj 6 -42 loadbang;
-#X msg 122 -33 16;
-#X msg 92 -34 100;
+-1 -1 3409 1;
+#X obj -8 -121 loadbang;
+#X msg 112 -103 16;
+#X msg 82 -104 100;
 #X floatatom 749 88 5 0 0 0 - - -;
 #X text 748 43 E5;
 #X obj 749 63 ctlin 7 5;
 #X obj 750 111 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4900 1;
+-1 -1 2469 1;
 #X floatatom 752 235 5 0 0 0 - - -;
 #X text 751 190 E6;
 #X obj 752 210 ctlin 7 6;
 #X obj 751 258 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4900 1;
+-1 -1 2469 1;
 #X floatatom 678 201 5 0 0 0 - - -;
 #X obj 423 210 stevelooper drumloop2.aif;
 #X obj 405 74 stevelooper drumloop1.aif;
 #X obj 630 524 dac~;
 #X obj 626 453 expr~ $v1+$v2;
+#X msg 151 -105 64;
+#X text 177 -108 init with defaults;
 #X connect 0 0 4 0;
 #X connect 0 0 50 1;
 #X connect 0 0 51 1;
@@ -97,6 +99,7 @@
 #X connect 38 0 40 0;
 #X connect 38 0 39 0;
 #X connect 38 0 4 0;
+#X connect 38 0 54 0;
 #X connect 39 0 6 0;
 #X connect 39 0 2 0;
 #X connect 39 0 35 0;
@@ -114,3 +117,7 @@
 #X connect 51 1 31 0;
 #X connect 53 0 52 0;
 #X connect 53 0 52 1;
+#X connect 54 0 28 0;
+#X connect 54 0 41 0;
+#X connect 54 0 49 0;
+#X connect 54 0 45 0;

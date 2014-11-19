@@ -30,7 +30,7 @@
 #X obj 83 638 vcf~ 1;
 #X floatatom 230 539 5 0 0 0 - - -;
 #X obj 263 480 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4900 1;
+-1 -1 2469 1;
 #X obj 497 89 expr $f1 / 60 / $f2;
 #X obj 506 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -63,16 +63,16 @@
 #X text 1114 236 left limit;
 #X text 1115 218 right limit;
 #X obj 612 430 hsl 500 15 0 1 0 0 empty empty playback_position_indicator
--2 -8 0 10 -262130 -1 -1 39354 1;
+-2 -8 0 10 -262130 -1 -1 21822 1;
 #X obj 611 238 hsl 500 15 0 1 0 0 empty empty empty -2 -6 0 8 -4032
--1 -1 45800 1;
+-1 -1 40300 1;
 #X obj 611 221 hsl 500 15 0 1 0 0 empty empty empty -2 -6 0 8 -4032
 -1 -1 0 1;
 #X text 1114 236 left limit;
 #X text 1115 218 right limit;
 #N canvas 0 22 450 278 (subpatch) 0;
-#X array \$0-loop 458752 float 2;
-#X coords 0 1 458752 -1 500 140 1 0 0;
+#X array \$0-loop 262144 float 2;
+#X coords 0 1 262144 -1 500 140 1 0 0;
 #X restore 609 273 graph;
 #X obj 607 463 unsig~ 50;
 #X floatatom 276 542 5 0 0 0 - - -;
