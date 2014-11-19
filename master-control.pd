@@ -1,4 +1,4 @@
-#N canvas 74 23 886 667 10;
+#N canvas 336 53 886 667 10;
 #X floatatom 51 22 5 0 0 0 - - -;
 #X obj 334 20 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -11,7 +11,7 @@
 #X text 2 20 MASTER;
 #X floatatom 89 209 5 0 0 0 - - -;
 #X obj 117 346 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
+-1 -1 10477 1;
 #X obj 98 292 unsig~ 20;
 #X obj 295 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -31,22 +31,22 @@
 1;
 #X text 186 543 % mean-cpu-load;
 #X obj 129 461 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--1 -1 785 1;
+-1 -1 770 1;
 #X obj 676 36 ctlin 7 1;
 #X floatatom 676 61 5 0 0 0 - - -;
 #X text 675 16 E1;
 #X obj 678 83 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
+-1 -1 3400 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 2314 1;
+-1 -1 9591 1;
 #X text 677 156 E2;
 #X obj 678 176 ctlin 7 2;
 #X obj 678 223 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 0 1;
+-1 -1 2500 1;
 #X floatatom 506 161 5 0 0 0 - - -;
 #X text 545 162 beats;
 #X obj 426 236 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 2621 1;
+-1 -1 6589 1;
 #X obj 6 -42 loadbang;
 #X msg 122 -33 16;
 #X msg 92 -34 100;
@@ -54,12 +54,12 @@
 #X text 748 43 E5;
 #X obj 749 63 ctlin 7 5;
 #X obj 750 111 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4900 1;
 #X floatatom 752 235 5 0 0 0 - - -;
 #X text 751 190 E6;
 #X obj 752 210 ctlin 7 6;
 #X obj 751 258 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4900 1;
 #X floatatom 678 201 5 0 0 0 - - -;
 #X obj 423 210 stevelooper drumloop2.aif;
 #X obj 405 74 stevelooper drumloop1.aif;
@@ -93,6 +93,7 @@
 #X connect 35 0 50 2;
 #X connect 38 0 40 0;
 #X connect 38 0 39 0;
+#X connect 38 0 4 0;
 #X connect 39 0 6 0;
 #X connect 39 0 2 0;
 #X connect 39 0 35 0;
