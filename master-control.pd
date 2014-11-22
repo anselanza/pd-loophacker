@@ -11,7 +11,7 @@
 #X text 2 20 MASTER;
 #X floatatom 32 109 5 0 0 0 - - -;
 #X obj 60 246 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--262144 -1 5718 1;
+-262144 -1 5318 1;
 #X obj 195 278 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X floatatom 47 217 5 0 0 0 - - -;
@@ -26,14 +26,14 @@
 1;
 #X text 26 489 % mean-cpu-load;
 #X obj -31 407 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--260097 -1 765 1;
+-260097 -1 755 1;
 #X obj 706 16 ctlin 7 1;
 #X floatatom 706 41 5 0 0 0 - - -;
 #X text 705 -4 E1;
 #X obj 708 63 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 926 1;
+-1 -1 270 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 5690 1;
+-1 -1 4888 1;
 #X obj -8 -121 loadbang;
 #X msg 112 -103 16;
 #X msg 82 -104 100;
@@ -41,19 +41,18 @@
 #X text 778 23 E5;
 #X obj 779 43 ctlin 7 5;
 #X obj 780 91 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -176105
--1 -1 965 1;
-#X obj 638 485 dac~;
-#X obj 626 453 expr~ $v1+$v2;
+-1 -1 2469 1;
+#X obj 295 505 dac~;
+#X obj 283 473 expr~ $v1+$v2;
 #X msg 151 -105 64;
 #X text 177 -108 init with defaults;
 #X text 96 227 MASTER LOOP TIME;
 #X obj 201 -86 send ctrl-default;
 #X obj 631 108 receive ctrl-default;
 #X text 190 299 master resync;
-#X text 670 485 Main Out;
-#X text 718 452 Main Mix;
+#X text 327 505 Main Out;
+#X text 375 472 Main Mix;
 #X text 367 21 load clips;
-#X obj 404 77 stevelooper drumloop1.aif;
 #X floatatom 843 -4 5 0 0 0 - - -;
 #X text 703 -27 VOLUME;
 #X text 774 -27 FX P1;
@@ -67,16 +66,17 @@
 #X text 895 -7 P1;
 #X obj 41 192 unsig~ 20;
 #X msg 457 -57 drumloop1.aif;
+#X obj 404 77 stevelooper;
 #X connect 0 0 4 0;
-#X connect 0 0 46 1;
+#X connect 0 0 58 1;
 #X connect 1 0 11 0;
-#X connect 2 0 46 2;
+#X connect 2 0 58 2;
 #X connect 3 0 14 0;
-#X connect 3 0 57 0;
+#X connect 3 0 56 0;
 #X connect 4 0 9 0;
 #X connect 6 0 4 1;
 #X connect 9 0 3 0;
-#X connect 11 0 46 3;
+#X connect 11 0 58 3;
 #X connect 12 0 10 0;
 #X connect 13 0 11 0;
 #X connect 14 0 15 0;
@@ -86,7 +86,7 @@
 #X connect 20 0 19 0;
 #X connect 23 0 24 0;
 #X connect 24 0 26 0;
-#X connect 26 0 46 4;
+#X connect 26 0 58 4;
 #X connect 28 0 30 0;
 #X connect 28 0 29 0;
 #X connect 28 0 4 0;
@@ -96,16 +96,16 @@
 #X connect 30 0 0 0;
 #X connect 31 0 34 0;
 #X connect 33 0 31 0;
-#X connect 34 0 46 5;
+#X connect 34 0 58 5;
 #X connect 36 0 35 0;
 #X connect 36 0 35 1;
 #X connect 37 0 40 0;
 #X connect 41 0 24 0;
 #X connect 41 0 31 0;
-#X connect 46 0 36 0;
-#X connect 46 1 27 0;
-#X connect 47 0 46 6;
+#X connect 46 0 58 6;
+#X connect 51 0 52 0;
 #X connect 52 0 53 0;
-#X connect 53 0 54 0;
-#X connect 57 0 12 0;
-#X connect 58 0 46 0;
+#X connect 56 0 12 0;
+#X connect 57 0 58 0;
+#X connect 58 0 36 0;
+#X connect 58 1 27 0;
