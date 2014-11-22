@@ -27,7 +27,7 @@
 #X obj 83 638 vcf~ 1;
 #X floatatom 230 539 5 0 0 0 - - -;
 #X obj 263 480 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2469 1;
+-1 -1 2701 1;
 #X obj 653 71 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 673 69 force eval;
@@ -57,7 +57,7 @@
 #X text 1114 236 left limit;
 #X text 1115 218 right limit;
 #X obj 612 430 hsl 500 15 0 1 0 0 empty empty playback_position_indicator
--2 -8 0 10 -262130 -1 -1 33908 1;
+-2 -8 0 10 -262130 -1 -1 19108 1;
 #X obj 611 238 hsl 500 15 0 1 0 0 empty empty empty -2 -6 0 8 -4032
 -1 -1 49900 1;
 #X obj 611 221 hsl 500 15 0 1 0 0 empty empty empty -2 -6 0 8 -4032
@@ -82,7 +82,7 @@
 #X obj 241 -99 inlet record;
 #X obj 255 -71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 127;
-#X obj 384 190 tabwrite~ \$0-loop;
+#X obj 416 205 tabwrite~ \$0-loop;
 #X obj 363 162 adc~;
 #X msg 330 113 stop;
 #X floatatom 447 12 10 0 0 0 - - -;
@@ -110,6 +110,8 @@
 #X obj 319 90 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 208 134 f;
+#X obj 244 227 % 3;
+#X floatatom 278 223 5 0 0 0 - - -;
 #X connect 6 0 16 1;
 #X connect 7 0 17 0;
 #X connect 8 0 14 1;
@@ -186,9 +188,11 @@
 #X connect 89 0 95 0;
 #X connect 90 0 91 0;
 #X connect 90 0 95 1;
-#X connect 91 0 92 0;
+#X connect 91 0 96 0;
 #X connect 92 1 93 0;
 #X connect 92 2 94 0;
 #X connect 93 0 83 0;
 #X connect 94 0 74 0;
 #X connect 95 0 90 0;
+#X connect 96 0 97 0;
+#X connect 97 0 92 0;
