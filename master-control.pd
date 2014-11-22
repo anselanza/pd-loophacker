@@ -11,7 +11,7 @@
 #X text 2 20 MASTER;
 #X floatatom 32 109 5 0 0 0 - - -;
 #X obj 60 246 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--262144 -1 11164 1;
+-262144 -1 691 1;
 #X obj 195 278 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
 #X floatatom 47 217 5 0 0 0 - - -;
@@ -26,14 +26,14 @@
 1;
 #X text 26 489 % mean-cpu-load;
 #X obj -31 407 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--260097 -1 395 1;
+-260097 -1 578 1;
 #X obj 706 16 ctlin 7 1;
 #X floatatom 706 41 5 0 0 0 - - -;
 #X text 705 -4 E1;
 #X obj 708 63 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 772 1;
+-1 -1 694 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 11162 1;
+-1 -1 691 1;
 #X obj -8 -121 loadbang;
 #X msg 112 -103 16;
 #X msg 82 -104 100;
@@ -41,7 +41,7 @@
 #X text 778 23 E5;
 #X obj 779 43 ctlin 7 5;
 #X obj 780 91 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -176105
--1 -1 2701 1;
+-1 -1 4900 1;
 #X obj 295 505 dac~;
 #X obj 283 473 expr~ $v1+$v2;
 #X msg 151 -105 64;
@@ -67,9 +67,13 @@
 #X obj 41 192 unsig~ 20;
 #X msg 457 -57 drumloop1.aif;
 #X obj 404 77 stevelooper;
+#X obj 368 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 365 57 local restart;
 #X connect 0 0 4 0;
 #X connect 0 0 58 2;
 #X connect 1 0 11 0;
+#X connect 1 0 57 0;
 #X connect 2 0 58 3;
 #X connect 3 0 14 0;
 #X connect 3 0 56 0;
@@ -77,6 +81,7 @@
 #X connect 6 0 4 1;
 #X connect 9 0 3 0;
 #X connect 11 0 58 4;
+#X connect 11 0 59 0;
 #X connect 12 0 10 0;
 #X connect 13 0 11 0;
 #X connect 14 0 15 0;
@@ -110,3 +115,4 @@
 #X connect 57 0 58 0;
 #X connect 58 0 36 0;
 #X connect 58 1 27 0;
+#X connect 59 0 58 4;
