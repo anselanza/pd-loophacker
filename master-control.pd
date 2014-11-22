@@ -1,4 +1,4 @@
-#N canvas 344 34 886 667 10;
+#N canvas 227 36 1049 699 10;
 #X floatatom 51 22 5 0 0 0 - - -;
 #X obj 334 20 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
@@ -11,7 +11,7 @@
 #X text 2 20 MASTER;
 #X floatatom 32 109 5 0 0 0 - - -;
 #X obj 60 246 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--262144 -1 11853 1;
+-262144 -1 11061 1;
 #X obj 41 192 unsig~ 20;
 #X obj 195 278 bng 20 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
@@ -27,22 +27,14 @@
 1;
 #X text 26 489 % mean-cpu-load;
 #X obj -31 407 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--260097 -1 741 1;
+-260097 -1 824 1;
 #X obj 706 16 ctlin 7 1;
 #X floatatom 706 41 5 0 0 0 - - -;
 #X text 705 -4 E1;
 #X obj 708 63 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 2469 1;
+-1 -1 424 1;
 #X obj 418 100 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 0 1;
-#X text 707 136 E2;
-#X obj 708 156 ctlin 7 2;
-#X obj 708 203 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 2469 1;
-#X floatatom 525 177 5 0 0 0 - - -;
-#X text 564 178 beats;
-#X obj 426 236 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 0 1;
+-1 -1 10117 1;
 #X obj -8 -121 loadbang;
 #X msg 112 -103 16;
 #X msg 82 -104 100;
@@ -51,14 +43,6 @@
 #X obj 779 43 ctlin 7 5;
 #X obj 780 91 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 2469 1;
-#X floatatom 782 215 5 0 0 0 - - -;
-#X text 781 170 E6;
-#X obj 782 190 ctlin 7 6;
-#X obj 781 238 hsl 50 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2469 1;
-#X floatatom 708 181 5 0 0 0 - - -;
-#X obj 423 210 stevelooper drumloop2.aif;
-#X obj 405 74 stevelooper drumloop1.aif;
 #X obj 638 485 dac~;
 #X obj 626 453 expr~ $v1+$v2;
 #X msg 151 -105 64;
@@ -66,18 +50,27 @@
 #X text 96 227 MASTER LOOP TIME;
 #X obj 201 -86 send ctrl-default;
 #X obj 631 108 receive ctrl-default;
-#X obj 627 252 receive ctrl-default;
 #X text 190 299 master resync;
 #X text 670 485 Main Out;
 #X text 718 452 Main Mix;
 #X text 367 21 load clips;
+#X obj 404 77 stevelooper drumloop1.aif;
+#X floatatom 843 -4 5 0 0 0 - - -;
+#X text 703 -27 VOLUME;
+#X text 774 -27 FX P1;
+#X text 843 -27 FX P2;
+#X text 895 -27 RECORD;
+#X obj 892 18 ctlin 20;
+#X floatatom 896 44 5 0 0 0 - - -;
+#X obj 891 69 tgl 30 0 empty empty empty 17 7 0 10 -1 -258113 -1 0
+127;
+#X text 896 107 E5;
+#X text 895 -7 P1;
 #X connect 0 0 4 0;
 #X connect 0 0 47 1;
-#X connect 0 0 48 1;
-#X connect 1 0 47 0;
-#X connect 1 0 48 0;
 #X connect 1 0 12 0;
-#X connect 2 0 48 2;
+#X connect 1 0 47 0;
+#X connect 2 0 47 2;
 #X connect 3 0 11 0;
 #X connect 3 0 15 0;
 #X connect 4 0 9 0;
@@ -85,7 +78,6 @@
 #X connect 9 0 3 0;
 #X connect 11 0 13 0;
 #X connect 12 0 47 3;
-#X connect 12 0 48 3;
 #X connect 13 0 10 0;
 #X connect 14 0 12 0;
 #X connect 15 0 16 0;
@@ -95,35 +87,24 @@
 #X connect 21 0 20 0;
 #X connect 24 0 25 0;
 #X connect 25 0 27 0;
-#X connect 27 0 48 4;
-#X connect 30 0 46 0;
-#X connect 31 0 47 4;
-#X connect 32 0 47 2;
-#X connect 35 0 37 0;
-#X connect 35 0 36 0;
-#X connect 35 0 4 0;
-#X connect 35 0 51 0;
-#X connect 36 0 6 0;
-#X connect 36 0 2 0;
-#X connect 36 0 32 0;
-#X connect 37 0 0 0;
+#X connect 27 0 47 4;
+#X connect 29 0 31 0;
+#X connect 29 0 30 0;
+#X connect 29 0 4 0;
+#X connect 29 0 38 0;
+#X connect 30 0 6 0;
+#X connect 30 0 2 0;
+#X connect 31 0 0 0;
+#X connect 32 0 35 0;
+#X connect 34 0 32 0;
+#X connect 35 0 47 5;
+#X connect 37 0 36 0;
+#X connect 37 0 36 1;
 #X connect 38 0 41 0;
-#X connect 40 0 38 0;
-#X connect 41 0 48 5;
-#X connect 42 0 45 0;
-#X connect 44 0 42 0;
-#X connect 45 0 47 5;
-#X connect 46 0 31 0;
-#X connect 47 0 50 1;
-#X connect 47 1 34 0;
-#X connect 48 0 50 0;
-#X connect 48 1 28 0;
-#X connect 50 0 49 0;
-#X connect 50 0 49 1;
-#X connect 51 0 46 0;
-#X connect 51 0 42 0;
-#X connect 51 0 54 0;
-#X connect 55 0 25 0;
-#X connect 55 0 38 0;
-#X connect 56 0 46 0;
-#X connect 56 0 42 0;
+#X connect 42 0 25 0;
+#X connect 42 0 32 0;
+#X connect 47 0 37 0;
+#X connect 47 1 28 0;
+#X connect 48 0 47 6;
+#X connect 53 0 54 0;
+#X connect 54 0 55 0;
