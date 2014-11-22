@@ -1,6 +1,6 @@
 #N canvas 227 36 1049 699 10;
 #X floatatom 51 22 5 0 0 0 - - -;
-#X obj 334 20 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+#X obj 200 188 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
 #X floatatom 513 45 5 0 0 0 - - -;
 #X obj -28 152 phasor~;
@@ -26,7 +26,7 @@
 1;
 #X text 26 489 % mean-cpu-load;
 #X obj -31 407 vsl 10 100 0 127 0 0 empty empty empty 0 -9 0 10 -261682
--260097 -1 578 1;
+-260097 -1 118 1;
 #X obj 706 16 ctlin 7 1;
 #X floatatom 706 41 5 0 0 0 - - -;
 #X text 705 -4 E1;
@@ -52,7 +52,6 @@
 #X text 190 299 master resync;
 #X text 327 505 Main Out;
 #X text 375 472 Main Mix;
-#X text 367 21 load clips;
 #X floatatom 843 -4 5 0 0 0 - - -;
 #X text 703 -27 VOLUME;
 #X text 774 -27 FX P1;
@@ -65,23 +64,24 @@
 #X text 896 107 E5;
 #X text 895 -7 P1;
 #X obj 41 192 unsig~ 20;
-#X msg 457 -57 drumloop1.aif;
+#X msg 419 29 drumloop1.aif;
 #X obj 404 77 stevelooper;
 #X obj 368 79 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 365 57 local restart;
+#X text 233 189 load all clips;
 #X connect 0 0 4 0;
-#X connect 0 0 58 2;
+#X connect 0 0 57 2;
 #X connect 1 0 11 0;
-#X connect 1 0 57 0;
-#X connect 2 0 58 3;
+#X connect 1 0 56 0;
+#X connect 2 0 57 3;
 #X connect 3 0 14 0;
-#X connect 3 0 56 0;
+#X connect 3 0 55 0;
 #X connect 4 0 9 0;
 #X connect 6 0 4 1;
 #X connect 9 0 3 0;
-#X connect 11 0 58 4;
-#X connect 11 0 59 0;
+#X connect 11 0 57 4;
+#X connect 11 0 58 0;
 #X connect 12 0 10 0;
 #X connect 13 0 11 0;
 #X connect 14 0 15 0;
@@ -91,7 +91,7 @@
 #X connect 20 0 19 0;
 #X connect 23 0 24 0;
 #X connect 24 0 26 0;
-#X connect 26 0 58 5;
+#X connect 26 0 57 5;
 #X connect 28 0 30 0;
 #X connect 28 0 29 0;
 #X connect 28 0 4 0;
@@ -101,18 +101,18 @@
 #X connect 30 0 0 0;
 #X connect 31 0 34 0;
 #X connect 33 0 31 0;
-#X connect 34 0 58 6;
+#X connect 34 0 57 6;
 #X connect 36 0 35 0;
 #X connect 36 0 35 1;
 #X connect 37 0 40 0;
 #X connect 41 0 24 0;
 #X connect 41 0 31 0;
-#X connect 46 0 58 7;
+#X connect 45 0 57 7;
+#X connect 50 0 51 0;
 #X connect 51 0 52 0;
-#X connect 52 0 53 0;
-#X connect 53 0 58 1;
-#X connect 56 0 12 0;
-#X connect 57 0 58 0;
-#X connect 58 0 36 0;
-#X connect 58 1 27 0;
-#X connect 59 0 58 4;
+#X connect 52 0 57 1;
+#X connect 55 0 12 0;
+#X connect 56 0 57 0;
+#X connect 57 0 36 0;
+#X connect 57 1 27 0;
+#X connect 58 0 57 4;
